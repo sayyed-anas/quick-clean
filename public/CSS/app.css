@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.Navbar .list-item-side ul li a:hover {
+  transition: 1s;
+  color: #fc3d03;
+  text-decoration: underline;
+}
+
+.add-card:hover {
+  background-color: rgba(0, 0, 0, 0.516);
+  transition: 1s;
+}

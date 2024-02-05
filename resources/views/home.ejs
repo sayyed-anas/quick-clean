@@ -3,9 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/app.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
+
   <body>
-    <h1>This Is Home File</h1>
+    <div class="header">
+      <nav class="Navbar mx-auto flex items-center justify-around py-2">
+        <div class="logo-side">
+          <img class="max-w-10" src="/images/pizza.png" alt="" />
+        </div>
+        <div class="list-item-side">
+          <ul class="nav-items flex items-center">
+            <li class="list-item mx-6"><a href="#">Menu</a></li>
+            <li class="list-item mx-6"><a href="#">Offers</a></li>
+            <li class="list-item mx-6"><a href="#">Register</a></li>
+            <li class="list-item mx-6"><a href="#">Login</a></li>
+            <div class="add-card px-4 py-2 bg-[#fc3d03] rounded-full">
+              <img
+                class="max-w-5 invert"
+                src="/images/add-to-cart.png"
+                alt=""
+              />
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <section class="hero bg-[#eee2e27a]">
+      <div class="hero-main-section flex justify-around items-center py-20">
+        <div class="hero-left">
+          <h6 class="text-lg"><i>Are you hungry</i></h6>
+          <h1 class="text-6xl">Don't Wait</h1>
+        </div>
+        <div class="hero-right">
+          <img src="/images/pizza.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="menu py-6">
+      <h1 class="text-center text-5xl">All Pizzas</h1>
+      <div class="grid grid-cols-4 gap-4 text-center pt-10">
+        <div class="card h-64 flex flex-col gap-4 items-center">
+          <img class="w-20" src="/images/pizza.png" alt="" />
+          <span><h2>Pizza Name</h2></span>
+          <span>Small</span>
+          <div>
+            <span>₹250</span>
+            <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+          </div>
+        </div>
+        <div class="card h-64 flex flex-col gap-4 items-center">
+          <img class="w-20" src="/images/pizza.png" alt="" />
+          <span><h2>Pizza Name</h2></span>
+          <span>Small</span>
+          <div>
+            <span>₹250</span>
+            <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+          </div>
+        </div>
+        <div class="card h-64 flex flex-col gap-4 items-center">
+          <img class="w-20" src="/images/pizza.png" alt="" />
+          <span><h2>Pizza Name</h2></span>
+          <span>Small</span>
+          <div>
+            <span>₹250</span>
+            <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+          </div>
+        </div>
+        <div class="card h-64 flex flex-col gap-4 items-center">
+          <img class="w-20" src="/images/pizza.png" alt="" />
+          <span><h2>Pizza Name</h2></span>
+          <span>Small</span>
+          <div>
+            <span>₹250</span>
+            <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+          </div>
+        </div>
+        <div class="card h-64 flex flex-col gap-4 items-center">
+          <img class="w-20" src="/images/pizza.png" alt="" />
+          <span><h2>Pizza Name</h2></span>
+          <span>Small</span>
+          <div>
+            <span>₹250</span>
+            <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+          </div>
+        </div>
+        <div class="card h-64 flex flex-col gap-4 items-center">
+          <img class="w-20" src="/images/pizza.png" alt="" />
+          <span><h2>Pizza Name</h2></span>
+          <span>Small</span>
+          <div>
+            <span>₹250</span>
+            <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+          </div>
+        </div>
+        <div class="card h-64 flex flex-col gap-4 items-center">
+          <img class="w-20" src="/images/pizza.png" alt="" />
+          <span><h2>Pizza Name</h2></span>
+          <span>Small</span>
+          <div>
+            <span>₹250</span>
+            <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+          </div>
+        </div>
+        <div class="card h-64 flex flex-col gap-4 items-center">
+          <img class="w-20" src="/images/pizza.png" alt="" />
+          <span><h2>Pizza Name</h2></span>
+          <span>Small</span>
+          <div>
+            <span>₹250</span>
+            <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/js/app.js"></script>
   </body>
 </html>
