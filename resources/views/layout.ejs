@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/app.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <nav class="Navbar mx-auto flex items-center justify-around py-2">
+        <div class="logo-side">
+          <a href="/"
+            ><img class="max-w-10" src="/images/pizza.png" alt=""
+          /></a>
+        </div>
+        <div class="list-item-side">
+          <ul class="nav-items flex items-center">
+            <li class="list-item mx-6"><a href="#">Menu</a></li>
+            <li class="list-item mx-6"><a href="#">Offers</a></li>
+            <li class="list-item mx-6"><a href="/Register">Register</a></li>
+            <li class="list-item mx-6"><a href="/login">Login</a></li>
+            <div class="add-card px-4 py-2 bg-[#fc3d03] rounded-full">
+              <img
+                class="max-w-5 invert"
+                src="/images/add-to-cart.png"
+                alt=""
+              />
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <%- body %>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
