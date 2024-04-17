@@ -5,36 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/CSS/app.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>QuickClean</title>
+    <link
+      rel="shortcut icon"
+      href="/images/laundryfav.png"
+      type="image/x-icon"
+    />
   </head>
 
   <body>
-    <div class="header">
-      <nav class="Navbar mx-auto flex items-center justify-around py-2">
-        <div class="logo-side">
+    <div class="header bg-[#FFFFFF] sticky top-0">
+      <nav class="Navbar mx-auto flex items-center justify-around py-2 md:py-0">
+        <div class="logo-side flex items-center">
           <a href="/"
-            ><img class="max-w-10" src="/images/pizza.png" alt=""
+            ><img class="max-w-10 mx-4" src="/images/logo.png" alt=""
           /></a>
+          <div class="flex items-center">
+            <h1 class="text-black font-bold">Quick</h1>
+            <h1 class="text-[#fc3d03] font-bold">Clean</h1>
+          </div>
         </div>
         <div class="list-item-side">
-          <ul class="nav-items flex items-center">
-            <li class="list-item mx-6"><a href="#">Menu</a></li>
-            <li class="list-item mx-6"><a href="#">Offers</a></li>
-            <li class="list-item mx-6"><a href="/Register">Register</a></li>
-            <li class="list-item mx-6"><a href="/login">Login</a></li>
-            <div class="add-card px-4 py-2 bg-[#fc3d03] rounded-full">
+          <ul class="nav-items items-center flex">
+            <div
+              class="list-items-inner w-screen md:w-auto md:bg-white md:flex md:flex py-10 md:py-0 text-center bg-[#eee2e27a] text-2xl md:text-xl relative hidden md:text-black"
+            >
               <img
-                class="max-w-5 invert"
-                src="/images/add-to-cart.png"
+                class="close-icon w-10 absolute top-10 right-10 md:hidden"
+                src="images/close.png"
                 alt=""
               />
+              <li class="list-item m-6 md:mx-6"><a href="/">Menu</a></li>
+              <li class="list-item m-6 md:mx-6"><a href="#">Offers</a></li>
+              <% if(user) {%>
+              <li class="list-item m-6 md:mx-6">
+                <form id="logout" action="/logout" method="post">
+                  <a
+                    onclick="document.getElementById('logout').submit()"
+                    href="#"
+                    >LogOut</a
+                  >
+                </form>
+              </li>
+              <% } else {%>
+              <li class="list-item m-6 md:mx-6">
+                <a href="/Register">Register</a>
+              </li>
+              <li class="list-item m-6 md:mx-6"><a href="/login">Login</a></li>
+              <% } %>
             </div>
+            <a class="cartImg" href="/cart">
+              <div
+                class="add-card w-20 px-4 py-1 bg-[#fc3d03] rounded-full flex items-center"
+              >
+                <span id="cartCounter" class="text-white mr-2 text-sm"
+                  ><%= session.cart ? session.cart.totalQty : "" %></span
+                >
+                <img
+                  class="max-w-5 invert"
+                  src="/images/add-to-cart.png"
+                  alt=""
+                />
+              </div>
+            </a>
           </ul>
+        </div>
+        <div class="humberger md:hidden">
+          <img class="w-6 md:hidden" src="images/list.png" alt="" />
         </div>
       </nav>
     </div>
 
     <%- body %>
+
+    <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline">QuickClean</a
+          >. All Rights Reserved.
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
+        >
+          <li>
+            <a href="/" class="hover:underline me-4 md:me-6">Menu</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Offers</a>
+          </li>
+          <li>
+            <a href="/Register" class="hover:underline me-4 md:me-6">Sign Up</a>
+          </li>
+          <li>
+            <a href="/login" class="hover:underline">Login</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="/js/app.js"></script>
   </body>

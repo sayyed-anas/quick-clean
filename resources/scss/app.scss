@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600&display=swap');
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .Navbar .list-item-side ul li a{
@@ -21,3 +27,14 @@
         
     }
 }
+
+.noty_theme__mint{
+    border-radius: 50px!important;
+    padding-left: 8px!important;
+}
+
+// .list-items-inner{
+//     width: 26rem;
+//     height: 20rem;
+//     background-color: red;
+// }

@@ -1,89 +1,45 @@
 <section class="hero bg-[#eee2e27a]">
-  <div class="hero-main-section flex justify-around items-center py-20">
-    <div class="hero-left">
-      <h6 class="text-lg"><i>Are you hungry</i></h6>
-      <h1 class="text-6xl">Don't Wait</h1>
+  <div
+    class="hero-main-section md:flex md:justify-around md:items-center md:flex-row md:py-20 flex flex-wrap flex-col items-center"
+  >
+    <div class="hero-left md:w-1/2 mx-6 mt-6">
+      <h1 class="text-5xl text-center">
+        Welcome to <span class="text-[#fc3d03]">QuickClean</span>
+      </h1>
+      <h6 class="text-sm">
+        <i class="text-center"
+          >Welcome to our efficient and convenient laundry services website!
+          We're here to make your laundry days stress-free and your clothes
+          fresh and clean. Explore our easy-to-use platform and experience
+          top-notch service that saves you time and effort. Say goodbye to
+          laundry hassles and hello to a simpler, fresher way of life!</i
+        >
+      </h6>
     </div>
     <div class="hero-right">
-      <img src="/images/pizza.png" alt="" />
+      <img src="/images/laundr-img.png" alt="" />
     </div>
   </div>
 </section>
 
 <section class="menu py-6">
-  <h1 class="text-center text-5xl">All Pizzas</h1>
+  <h1 class="text-center text-4xl">All Categories</h1>
+
   <div class="grid lg:grid-cols-4 gap-4 text-center pt-10 md:grid-cols-2">
+    <% all_carts.Carts.forEach(function(all_carts) {%>
     <div class="card h-64 flex flex-col gap-4 items-center">
-      <img class="w-20" src="/images/pizza.png" alt="" />
-      <span><h2>Pizza Name</h2></span>
-      <span>Small</span>
+      <img class="w-20" src="<%=all_carts.img%>" alt="" />
+      <span><h2><%=all_carts.name%></h2></span>
+      <span><%=all_carts.delivery%></span>
       <div>
-        <span>₹250</span>
-        <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
+        <span>₹<%=all_carts.price%></span>
+        <span
+          class="add-to-cart cursor-pointer bg-[#fc3d03] px-3 py-2 rounded-full ml-3 text-white"
+          data-pizza="<%=JSON.stringify(all_carts)%>"
+          ><%=all_carts.btn%></span
+        >
       </div>
     </div>
-    <div class="card h-64 flex flex-col gap-4 items-center">
-      <img class="w-20" src="/images/pizza.png" alt="" />
-      <span><h2>Pizza Name</h2></span>
-      <span>Small</span>
-      <div>
-        <span>₹250</span>
-        <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
-      </div>
-    </div>
-    <div class="card h-64 flex flex-col gap-4 items-center">
-      <img class="w-20" src="/images/pizza.png" alt="" />
-      <span><h2>Pizza Name</h2></span>
-      <span>Small</span>
-      <div>
-        <span>₹250</span>
-        <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
-      </div>
-    </div>
-    <div class="card h-64 flex flex-col gap-4 items-center">
-      <img class="w-20" src="/images/pizza.png" alt="" />
-      <span><h2>Pizza Name</h2></span>
-      <span>Small</span>
-      <div>
-        <span>₹250</span>
-        <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
-      </div>
-    </div>
-    <div class="card h-64 flex flex-col gap-4 items-center">
-      <img class="w-20" src="/images/pizza.png" alt="" />
-      <span><h2>Pizza Name</h2></span>
-      <span>Small</span>
-      <div>
-        <span>₹250</span>
-        <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
-      </div>
-    </div>
-    <div class="card h-64 flex flex-col gap-4 items-center">
-      <img class="w-20" src="/images/pizza.png" alt="" />
-      <span><h2>Pizza Name</h2></span>
-      <span>Small</span>
-      <div>
-        <span>₹250</span>
-        <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
-      </div>
-    </div>
-    <div class="card h-64 flex flex-col gap-4 items-center">
-      <img class="w-20" src="/images/pizza.png" alt="" />
-      <span><h2>Pizza Name</h2></span>
-      <span>Small</span>
-      <div>
-        <span>₹250</span>
-        <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
-      </div>
-    </div>
-    <div class="card h-64 flex flex-col gap-4 items-center">
-      <img class="w-20" src="/images/pizza.png" alt="" />
-      <span><h2>Pizza Name</h2></span>
-      <span>Small</span>
-      <div>
-        <span>₹250</span>
-        <span class="bg-[#fc3d03] px-3 py-2 rounded-full ml-3">+ Add</span>
-      </div>
-    </div>
+    <%})%>
   </div>
 </section>
